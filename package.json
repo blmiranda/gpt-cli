@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "ChatGPT cli client",
   "type": "module",
-  "main": "./bin/index.js",
+  "main": "./dist/index.js",
   "bin": {
-    "gpt": "./bin/index.js"
+    "gpt": "./dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +16,8 @@
   "devDependencies": {
     "@types/node": "^20.9.2",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "openai": "^4.19.0"
   }
 }
