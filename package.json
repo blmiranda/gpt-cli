@@ -1,7 +1,21 @@
 {
-  "name": "gpt-cli",
+  "name": "gpt-cli-tool",
   "version": "1.0.0",
   "description": "ChatGPT cli client",
+  "keywords": [
+    "ChatGPT",
+    "gpt",
+    "cli"
+  ],
+  "homepage": "https://github.com/blmiranda/gpt-cli-tool",
+  "bugs": {
+    "url": "https://github.com/blmiranda/gpt-cli-tool/issues",
+    "email": "brianmiranda.dev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blmiranda/gpt-cli-tool.git"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
