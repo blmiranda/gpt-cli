@@ -2,86 +2,70 @@
 
 Command-line interface for ChatGPT.
 
+<img width="1663" alt="Screenshot 2023-11-21 at 11 18 35 AM" src="https://github.com/blmiranda/gpt-cli-tool/assets/94651050/add34a9b-89fa-4852-9762-bcb848651c76">
+
+## Features
+
+### Coming soon
+
+* **Model customization**: Create an accessible config file to give you fine grain control over the model you want to use
+* **Continuous conversation**: Make the model keep conversations just like in the ChatGPT website
+* **Usage tracking**: Track your usage with token count and price information.
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will walk you through the process of installing the software
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software
 
-```
-Give examples
-```
+* NodeJS & npm
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get the software running
 
-Say what the step will be
+#### Get an OpenAI api key
 
-```
-Give the example
-```
+1. Go to the [OpenAI website](https://www.openai.com/)
+2. Create an account
+3. Navigate to the main screen. It should be something like this when you log in...
+  <img width="610" alt="Screenshot" src="https://github.com/blmiranda/gpt-cli-tool/assets/94651050/14d5dfaa-749e-4e94-946f-fac0ebb54022">
 
-And repeat
+4. Click on "API" and navigate to the "API keys" tab
+<img width="610" alt="Screenshot" src="https://github.com/blmiranda/gpt-cli-tool/assets/94651050/bde32821-7fbe-49ac-8b6f-8e42196f4a6c">
 
-```
-until finished
-```
+5. Generate an api key and save it somewhere, you are going to need it in the next step.
 
-End with an example of getting some data out of the system or using it for a little demo
+#### Add the OpenAI api key to your system's env variables
 
-## Running the tests
+You can use whatever shell and editor you like.
 
-Explain how to run the automated tests for this system
+This install assumes a Linux/OSX machine.
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+bash
+```bash
+vim ~/.bashrc
+export OPENAI_API_KEY=<your_key_here>
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+fish
+```fish
+set -Ux OPEN_AI_KEY <your_key_here>
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+#### Install gpt-cli-tool with npm
+```
+npm install -g gpt-cli-tool
+```
 
 ## Built With
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+- [NodeJS](https://nodejs.org/en) - The runtime
+- [NPM](https://www.npmjs.com/) - Dependency Management
+- [OpenAI API](https://openai.com/blog/openai-api) - The API
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
