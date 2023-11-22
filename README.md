@@ -66,6 +66,10 @@ npm install -g gpt-cli-tool
 - [NPM](https://www.npmjs.com/) - Dependency Management
 - [OpenAI API](https://openai.com/blog/openai-api) - The API
 
+## Authors
+
+- **Brian Miranda** - *Developed the whole project* - [blmiranda](https://github.com/blmiranda)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
