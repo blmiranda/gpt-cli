@@ -8,9 +8,9 @@ Command-line interface for ChatGPT.
 
 ### Coming soon
 
-- [x] **Model customization**: Create an accessible config file to give you fine grain control over the model you want to use
-- [ ] **Continuous conversation**: Make the model keep conversations just like in the ChatGPT website
-- [ ] **Usage tracking**: Track your usage with token count and price information.
+- [ ] **Model customization**: Create an accessible config file to give you fine grain control over the model you want to use
+- [x] **Continuous conversation**: Make the model keep conversations just like in the ChatGPT website
+- [x] **Usage tracking**: Track your usage with token count and price information.
 
 ## Getting Started
 
