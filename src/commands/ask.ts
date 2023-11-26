@@ -1,16 +1,29 @@
 import openai from '../clients/openaiClient.js';
 
+import colors from '../utils/colors.js';
+import conversation from '../utils/conversation.js';
+import displayResponse from '../utils/displayResponse.js';
+import displayUsageStatus from '../utils/displayUsageStatus.js';
+
 async function ask(question: string) {
   try {
-    const stream = await openai.chat.completions.create({
+    console.log(colors.yellow, 'Processing...', colors.reset, '\n');
+
+    conversation.addToHistory({ role: 'user', content: question });
+
+    const response = await openai.chat.completions.create({
       model: 'gpt-4',
-      messages: [{ role: 'user', content: question }],
-      stream: true,
+      messages: conversation.history,
+      stream: false,
     });
 
-    for await (const chunk of stream) {
-      process.stdout.write(chunk.choices[0]?.delta?.content || '');
-    }
+    conversation.addToHistory({
+      role: 'assistant',
+      content: response.choices[0]?.message.content,
+    });
+
+    displayResponse(response.choices[0]?.message.content);
+    displayUsageStatus(response.usage);
   } catch (error) {
     throw new Error(error);
   }
