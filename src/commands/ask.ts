@@ -3,6 +3,7 @@ import openai from '../clients/openaiClient.js';
 import colors from '../utils/colors.js';
 import conversation from '../utils/conversation.js';
 import displayResponse from '../utils/displayResponse.js';
+import displayUsageStatus from '../utils/displayUsageStatus.js';
 
 async function ask(question: string) {
   try {
@@ -22,6 +23,7 @@ async function ask(question: string) {
     });
 
     displayResponse(response.choices[0]?.message.content);
+    displayUsageStatus(response.usage);
   } catch (error) {
     throw new Error(error);
   }
